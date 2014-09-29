@@ -1,0 +1,7 @@
+spring_profiles: mysql,default
+
+database.driverClassName: org.mariadb.jdbc.Driver
+database.url: jdbc:mysql://localhost:3306/uaa
+database.username: uaa
+database.password: uaa_pass
+
