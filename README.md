@@ -27,19 +27,19 @@ First you need to get Vagrant here: https://www.vagrantup.com/
 
 Now you will need to add the ubuntu 64 bit image by executing:
 
-  $ vagrant box add precise64 http://files.vagrantup.com/precise64.box 
+	$ vagrant box add precise64 http://files.vagrantup.com/precise64.box 
 
 For more info see: https://docs.vagrantup.com/v2/providers/basic_usage.html
 
 Now, you just need to get the project from the repo by running:
 
-  $ git clone https://github.com/nopbyte/compose-idm-vagrant
-  $ cd compose-idm-vagrant
-  $ vagrant up
+	$ git clone https://github.com/nopbyte/compose-idm-vagrant
+	$ cd compose-idm-vagrant
+	$ vagrant up
 
 Afterwards vagrant will map the endpoint for compose-idm to your (local host machine) 8080. So you can execute something like the following line, either in your local host machine, or inside the vagrant virtual machine to test compose-idm functionality:
 
-  $ curl --digest -u "composecontroller:composecontrollerpassword"  -H "Content-Type: application/json;charset=UTF-8" -d '{"username":"test2","password":"pass"}' http://localhost:8080/idm/user/
+	$ curl --digest -u "composecontroller:composecontrollerpassword"  -H "Content-Type: application/json;charset=UTF-8" -d '{"username":"test2","password":"pass"}' http://localhost:8080/idm/user/
 
 Please have a little patience when the vagrant up command finishes... it still takes a couple of seconds for compose-idm to come up completely due to the ammount of components that need to be loaded ;)
 
